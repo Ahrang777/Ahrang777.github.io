@@ -2,7 +2,7 @@
 layout: single
 title:  "Spring MVC"
 categories: Spring
-tag: [Spring MVC]]
+tag: [Spring MVC]
 toc: true
 author_profile: false
 sidebar:
