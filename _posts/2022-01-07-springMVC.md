@@ -11,7 +11,7 @@ sidebar:
 
 # Spring MVC
 
-springmvc 사진
+![springmvc](https://user-images.githubusercontent.com/59478159/148723742-c30f9f7b-d9df-4eb1-bd15-1c142e5fe514.png)
 
 ## 개념설명
 Dispatcher servlet
@@ -118,8 +118,7 @@ DispatcherServlet 이 생성한 bean은 ContextLoaderListener 가 생성한 bean
 ```
 
 
-
-springmvc 사진1
+![springmvc1](https://user-images.githubusercontent.com/59478159/148723755-cb153939-4739-4a97-936a-519a59196041.png)
 
 추가 설명
 ContextLoaderListener 와 DispatcherServlet 은 각각 WebApplicationContext 인스턴스를 생성한다.
@@ -138,7 +137,7 @@ Model
 Controller 에서 View로 object들을 전달하는데 사용된다
 named objects(= model attributes) 의 collection이다.
 
-사진 3
+![springmvc2](https://user-images.githubusercontent.com/59478159/148723761-b9bb8c90-273d-4dec-9855-f5f7cc5d124b.png)
 
 Model 구현방법
 1) java.util.map 
