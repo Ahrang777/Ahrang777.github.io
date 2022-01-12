@@ -93,7 +93,7 @@ public class UserServiceImpl implements UserService {
 
 ## 생성자 주입을 사용해야 하는 이유
 
-1. 테스트 코드의 작성 <br>
+1) 테스트 코드의 작성 <br>
 
 ```java
 @Service
@@ -127,7 +127,7 @@ public class UserServiceTest{
 생성자 주입을 사용한다면 컴파일 시점에 객체를 주입받아 테스트 코드를 작성할 수 있다. 주입할 객체가 누락된 경우에는 컴파일 시점에 발견 할 수 있다.
 
 
-2. final 키워드 작성, Lombok과 결합으로 코드 간결<br>
+2) final 키워드 작성, Lombok과 결합으로 코드 간결<br>
 
 생성자 주입을 사용하면 필드를 final로 선언할 수 있고 컴파일 시점에 누락된 의존성을 확인 가능하다. 또한 final키워드 사용으로 런타임시 객체 불변성을 보장한다. 생성자 주입이 아닌 다른 주입 방법들은 객체의 생성(생성자 호출) 이후에 호출되므로 final 키워드를 사용할 수 없다.
 
@@ -149,10 +149,10 @@ public class UserServiceImpl implements UserService {
 ```
 
 
-3. 순환 참조 에러 방지<br>
+3) 순환 참조 에러 방지<br>
 애플리케이션 구동 시점(객체의 생성 시점)에 순환 참조 에러를 방지할 수 있다.
 
-예를 들어 UserServiceImpl의 register 함수가 memberService의 add를 호출하고, memberServiceImpl의 add함수가 UserServiceImpl의 register 함수를 호출한다면 어떻게 되겠는가?
+예를 들어 UserServiceImpl의 register 함수가 memberService의 add를 호출하고, memberServiceImpl의 add함수가 UserServiceImpl의 register 함수를 호출한다면 어떻게 될까?
 
 ```java
 @Service
@@ -185,19 +185,19 @@ public class MemberServiceImpl extends MemberService {
 위의 두 메소드는 서로를 계속 호출할 것이고, 메모리에 함수의 CallStack이 계속 쌓여 StackOverflow 에러가 발생하게 된다.
 
 
-
+```
 Caused by: java.lang.StackOverflowError: null
 	at com.mang.example.user.MemberServiceImpl.add(MemberServiceImpl.java:20) ~[main/:na]
 	at com.mang.example.user.UserServiceImpl.register(UserServiceImpl.java:14) ~[main/:na]
 	at com.mang.example.user.MemberServiceImpl.add(MemberServiceImpl.java:20) ~[main/:na]
 	at com.mang.example.user.UserServiceImpl.register(UserServiceImpl.java:14) ~[main/:na]
+```
 
 만약 이러한 문제를 발견하지 못하고 서버가 운영된다면 어떻게 되겠는가? 해당 메소드의 호출 시에 StackOverflow 에러에 의해 서버가 죽게 될 것이다.
-
 하지만 생성자 주입을 이용하면 이러한 순환 참조 문제를 방지할 수 있다.
 
 
-
+```
 Description:
 
 The dependencies of some of the beans in the application context form a cycle:
@@ -207,7 +207,7 @@ The dependencies of some of the beans in the application context form a cycle:
 ↑     ↓
 |  userServiceImpl defined in file [C:\Users\Mang\IdeaProjects\build\classes\java\main\com\mang\example\user\UserServiceImpl.class]
 └─────┘
-
+```
 
 애플리케이션 구동 시점(객체의 생성 시점)에 에러가 발생하기 때문이다. 그러한 이유는 Bean에 등록하기 위해 객체를 생성하는 과정에서 다음과 같이 순환 참조가 발생하기 때문이다.
 
