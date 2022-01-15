@@ -131,7 +131,6 @@ public class UserServiceTest{
 
 생성자 주입을 사용하면 필드를 final로 선언할 수 있고 컴파일 시점에 누락된 의존성을 확인 가능하다. 또한 final키워드 사용으로 런타임시 객체 불변성을 보장한다. 생성자 주입이 아닌 다른 주입 방법들은 객체의 생성(생성자 호출) 이후에 호출되므로 final 키워드를 사용할 수 없다.
 
-또한 fianl 키워드를 사용해서 Lombok과 결합되어 코드를 간결하게 작성 할 수 있다. Lombok에는 final 변수를 위한 생성자를 대신 생성해주는 @RequiredArgsConstructor 이 있다. 아래 코드의 경우 final 키워드 사용으로 @RequiredArgsConstructor 를 통해 생성자가 하나 생기게 되고 Spring에서는 생성자 주입을 권장하여 생성자가 1개일 경우 @Autowired가 생략되어도 의존성 주입이 일어난다는 사실을 생각해보면 현재 생성자가 하나이므로 아래와 같은 형태만으로도 생성자 주입이 가능하다.
 
 ```java
 @Service
@@ -193,7 +192,7 @@ Caused by: java.lang.StackOverflowError: null
 	at com.mang.example.user.UserServiceImpl.register(UserServiceImpl.java:14) ~[main/:na]
 ```
 
-만약 이러한 문제를 발견하지 못하고 서버가 운영된다면 어떻게 되겠는가? 해당 메소드의 호출 시에 StackOverflow 에러에 의해 서버가 죽게 될 것이다.
+만약 이러한 문제를 발견하지 못하고 서버가 운영된다면 해당 메소드의 호출 시에 StackOverflow 에러에 의해 서버가 죽게 될 것이다.
 하지만 생성자 주입을 이용하면 이러한 순환 참조 문제를 방지할 수 있다.
 
 
