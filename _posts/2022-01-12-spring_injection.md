@@ -29,7 +29,8 @@ public class UserServiceImpl implements UserService {
 }
 ```
 
-생성자 주입은 생성자 호출 시점에 1회 호출되는 것이 보장된다. 때문에 주입받은 객체가 변하지 않거나, 반드시 객체 주입이 필요한 경우에 강제하기 위해 사용 할 수 있다. 스프링 프레임워크에서는 생성자 주입을 권장하여 생성자가 1개만 있을경우 @Autowired를 생략하여도 주입이 가능하다. 위, 아래 코드는 동일한 내용이다.
+생성자 주입은 생성자 호출 시점에 1회 호출되는 것이 보장된다. 때문에 주입받은 객체가 변하지 않거나, 반드시 객체 주입이 필요한 경우에 강제하기 위해 사용 할 수 있다. 스프링 프레임워크에서는 생성자 주입을 권장하여 생성자가 1개만 있을경우 @Autowired를 생략하여도 주입이 가능하다. 위, 아래 코드는 동일한 내용이다. 
+생성자가 여러개 있을 경우 특정 생성자 하나에 @Autowired를 지정해 줘야한다. 여러개의 생성자에 @Autowired를 붙일 수는 없다. 
 
 ```java
 @Service 
@@ -93,7 +94,11 @@ public class UserServiceImpl implements UserService {
 
 ## 생성자 주입을 사용해야 하는 이유
 
-1) 테스트 코드의 작성 <br>
+1) 단일 책임 원칙 관점
+단일 책임 원칙 관점으로 봤을때 의존하는 객체가 많다는 것은, 하나의 클래스가 많은 책임을 가진다는 의미이다. 생성자 주입을 이용한다면 생성자에 매개변수가 많아지고 이는 리팩토링을 필요로 한다는 좋은 지표가 될 수 있다.
+
+
+2) 테스트 코드의 작성
 
 ```java
 @Service
@@ -122,14 +127,21 @@ public class UserServiceTest{
 }
 ```
 
-필드 주입일 경우 순수한 자바 코드로 테스트를 작성하는 것이 불가능하다. 테스트 코드가 Spring과 같은 DI 프레임워크 위에서 동작하지 않아서 위 코드에서 의존관계 주입이 이루어지지 않았다. 때문에 userRepository 가 null 이고 이런 userRepository가 add메서드를 호출하는 경우 NPE(java.lang.NullPointerException) 이 발생한다. 이를 해결하기 위해 Setter를 사용한다면 싱글톤 패턴 기반의 빈이 변경될 수 있다는 문제가 생긴다. 반대로 테스트 코드에서 @Autowired를 사용하기 위해 스프링 빈을 올리면 컴포넌트들을 등록하고 초기화 하는데 시간이 커져 테스트 비용이 증가하게 된다. 때문에 테스트를 빠르게 자주 돌릴수 없다. 
+필드 주입일 경우 스프링 컨테이너의 도움 없이는 의존성 주입을 할 수 없어서 테스트가 불가능하다. 위와 같은 경우 의존성 주입이 이루어지지 않아서 userRepository 가 null 이고 이런 userRepository가 add메서드를 호출하는 경우 NPE(java.lang.NullPointerException) 이 발생한다.
+
+이를 해결하기 위해 Setter를 사용한다면 싱글톤 패턴 기반의 빈이 변경될 수 있다는 문제가 생긴다. 반대로 테스트 코드에서 @Autowired를 사용하기 위해 스프링 빈을 올리면 컴포넌트들을 등록하고 초기화 하는데 시간이 커져 테스트 비용이 증가하게 된다. 때문에 테스트를 빠르게 자주 돌릴수 없다. 
 
 생성자 주입을 사용한다면 컴파일 시점에 객체를 주입받아 테스트 코드를 작성할 수 있다. 주입할 객체가 누락된 경우에는 컴파일 시점에 발견 할 수 있다.
 
 
-2) final 키워드 작성, Lombok과 결합으로 코드 간결<br>
+3) final 키워드 작성, Lombok과 결합으로 코드 간결<br>
 
 생성자 주입을 사용하면 필드를 final로 선언할 수 있고 컴파일 시점에 누락된 의존성을 확인 가능하다. 또한 final키워드 사용으로 런타임시 객체 불변성을 보장한다. 생성자 주입이 아닌 다른 주입 방법들은 객체의 생성(생성자 호출) 이후에 호출되므로 final 키워드를 사용할 수 없다.
+
+또한 final 키워드를 사용할 경우 lombok의 @RequiredArgsConstructor 를 사용하여 코드를 간결하게 작성할 수 있다. 하지만 위에서 설명한 단일 책임 원칙 관점에서 봤을때 @RequiredArgsConstructor를 이용할 경우 생성자 주입의 장점이 사라질 수 있다.
+
+**@RequiredArgsConstructor**
+final이나 @NotNull 을 사용한 필드에 대한 생성자를 자동 생성한다.
 
 
 ```java
@@ -148,7 +160,7 @@ public class UserServiceImpl implements UserService {
 ```
 
 
-3) 순환 참조 에러 방지<br>
+4) 순환 참조 에러 방지<br>
 애플리케이션 구동 시점(객체의 생성 시점)에 순환 참조 에러를 방지할 수 있다.
 
 예를 들어 UserServiceImpl의 register 함수가 memberService의 add를 호출하고, memberServiceImpl의 add함수가 UserServiceImpl의 register 함수를 호출한다면 어떻게 될까?
