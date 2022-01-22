@@ -33,13 +33,17 @@ JPA 를 사용하기 위해서 JPA를 구현한 ORM 프레임워크 중 하나�
 
 
 
-<사진1>
+![img1](../images/2022-01-20-hibernate/img1.png)
 
 
 
 Hiberante을 사용함으로 JDBC 코드의 양을 최소하 할 수 있다. 우리는 객체 지향적으로 프로그래밍 하고 내부적으로 JDBC 코드가 자동으로 생성된다.
 
-<사진 2>
+
+
+![img2](../images/2022-01-20-hibernate/img2.png)
+
+
 
 우리가 Hibernate API를 사용하면 JDBC API로 변환된다. 결국 Hibernate은 DB 사용을 위해 JDBC 코드를 사용한다. 
 
@@ -57,11 +61,11 @@ Hiberante을 사용함으로 JDBC 코드의 양을 최소하 할 수 있다. 우
 
 
 
-<사진 3>
+![img3](../images/2022-01-20-hibernate/img3.jpg)
 
 
 
-### SessionFactory 객체
+## SessionFactory 객체
 
 SessionFactory는 애플리케이션마다 1개만 존재한다.
 
@@ -69,7 +73,7 @@ SessionFactory 객체는 session 을 생성한다. Thread safe 한 객체이며 
 
 
 
-### Session 객체
+## Session 객체
 
 애플리케이션과 DB 간 communication, 일반적으로 Thread safe 하지 않아서 오랫동안 열어두면 안된다. 매핑된 entity class 의 객체에 대한 CRUD 를 제공한다. 
 
@@ -83,13 +87,15 @@ D : Delete
 
 
 
-<사진 4>
-
-캐시를 이용하여 작업한 것들을 모았다가 한번에 DB에 반영한다. 매번 바로 DB에 기록하는것은 퍼포먼스에 영향을 주기때문에 캐시를 이용한다. 
+![img4](../images/2022-01-20-hibernate/img4.jpg)
 
 
 
-#### session 메소드
+매번 바로 DB에 기록하는것은 퍼포먼스에 영향을 주기때문에 캐시를 이용한다. 캐시를 이용하여 작업한 것들을 모았다가 한번에 DB에 반영한다.
+
+
+
+### session 메소드
 
 - Object get(Class clazz, Serializable id) throws HibernateException 
 
@@ -148,7 +154,7 @@ public List<Product> getProductList() {
 
 
 
-HQL(Hibernate Query Language) 특징
+### HQL(Hibernate Query Language) 특징
 
 - SQL 과 유사하다
 
@@ -180,7 +186,7 @@ HQL(Hibernate Query Language) 특징
 
 
 
-HQL 예시
+### HQL 사용 예시
 
 Select Query
 
