@@ -31,6 +31,8 @@ JPA는 애플리케이션과 JDBC 사이에서 동작한다. 개발자가 JPA를
 
 
 
+
+
 **find**
 
 ![img8](../images/2022-01-20-hibernate/img8.png)
@@ -44,6 +46,9 @@ JPA는
 3. DB로부터 결과를 받아온다.
 4. 결과(ResultSet)를 객체에 모두 매핑한다.
    쿼리를 JPA가 만들어 주기 때문에 Object와 RDB 간의 패러다임 불일치를 해결할 수 있다. 
+
+
+
 
 
 **insert**
