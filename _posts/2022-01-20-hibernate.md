@@ -25,7 +25,7 @@ JPA는 Java Persistence API(자바 ORM 기술에 대한 API 표준 명세) 의 �
 
 ## 동작과정
 
-![img7](../images/2022-01-20-hibernate/img7.png)
+![img7](https://user-images.githubusercontent.com/59478159/150668174-7cbb82d7-fba2-4d9f-b02f-254d1c4f5f16.png)
 
 JPA는 애플리케이션과 JDBC 사이에서 동작한다. 개발자가 JPA를 사용하면 JPA 내부에서 JDBC API 를 사용하여 SQL을 호출하여 DB와 통신한다. 
 
@@ -35,7 +35,7 @@ JPA는 애플리케이션과 JDBC 사이에서 동작한다. 개발자가 JPA를
 
 **find**
 
-![img8](../images/2022-01-20-hibernate/img8.png)
+![img8](https://user-images.githubusercontent.com/59478159/150668179-eb008ddf-9625-46ec-abfc-a81bc6eda0cd.png)
 
 개발자는 member의 PK를 JPA에게 넘겨준다. 
 
@@ -53,7 +53,7 @@ JPA는
 
 **insert**
 
-![img9](../images/2022-01-20-hibernate/img9.png)
+![img9](https://user-images.githubusercontent.com/59478159/150668181-c2af3e54-005f-461c-b285-cf93ad567d3d.png)
 
 MemberDAO에서 객체를 저장하고 싶을때 개발자는 Member 객체를 JPA에게 넘긴다. 
 
@@ -114,7 +114,7 @@ Member를 가져올때 연관된 모든 객체(Team)를 같이 가져온다.
 
 JPA는 ORM을 위한 자바 표준이고 Spring Data JPA는 JPA를 쉽게 사용하기 위해 스프링에서 제공하고 있는 프레임워크이다. 
 
-![img6](../images/2022-01-20-hibernate/img6.png)
+![img6](https://user-images.githubusercontent.com/59478159/150668168-f561ae1a-f362-49ea-8251-421f664f0736.png)
 
 
 
@@ -128,7 +128,7 @@ JPA 를 사용하기 위해서 JPA를 구현한 ORM 프레임워크 중 하나�
 
 
 
-![img1](../images/2022-01-20-hibernate/img1.png)
+![img1](https://user-images.githubusercontent.com/59478159/150668149-6f66766a-c9d8-41d8-a9a7-9d2cc73d3120.png)
 
 
 
@@ -136,7 +136,7 @@ Hiberante을 사용함으로 JDBC 코드의 양을 최소화 할 수 있다. 우
 
 
 
-![img2](../images/2022-01-20-hibernate/img2.png)
+![img2](https://user-images.githubusercontent.com/59478159/150668151-310ff771-fa3a-4f1a-9d75-6f57b4b63824.png)
 
 
 
@@ -144,7 +144,7 @@ Hiberante을 사용함으로 JDBC 코드의 양을 최소화 할 수 있다. 우
 
 
 
-![img5](../images/2022-01-20-hibernate/img5.png)
+![img5](https://user-images.githubusercontent.com/59478159/150668165-c9e4429d-a3c2-4302-bb6b-b627ba5f50f5.png)
 
 
 
@@ -166,7 +166,7 @@ JDBC 는 DB에 접근할 수 있도록 자바에서 제공하는 API이다. DAO�
 
 
 
-![img3](../images/2022-01-20-hibernate/img3.jpg)
+![img3](https://user-images.githubusercontent.com/59478159/150668156-f732f27e-c566-4c55-bb4d-b9986ad28fc7.jpg)
 
 
 
@@ -192,7 +192,7 @@ D : Delete
 
 
 
-![img4](../images/2022-01-20-hibernate/img4.jpg)
+![img4](https://user-images.githubusercontent.com/59478159/150668158-867e3357-222a-4982-9195-b13d2bc1eafa.jpg)
 
 
 
