@@ -59,6 +59,46 @@ sidebar:
 
 
 
+● 참고사항
+
+[Java가 다중 상속을 지원하지 않는 이유]
+
+![img2](../images/2022-01-31-interface/img2.png)
+
+
+
+다중 상속을 지원하면 다이아몬드 문제가 발생할 수 있다. 예를 들면 Human 클래스에 있는 walk() 메서드를 Human 클래스를 상속받는 Female 클래스와 Male 클래스가 모두 구현했다고 가정하면, Female 클래스와 Male 클래스를 다중 상속 받은 Person 클래스의 walk() 메서드에서는 Male, Female 중 어디의 walk()를 호출해야 할까? 이처럼 모호성이 생긴다. 때문에 Java에서는 다중 상속을 지원하지 않는다.(인터페이스는 다중 상속 허용)
+
+```java
+class Human{
+    public void walk(){
+        System.out.println("human 걷기");
+    }
+}
+
+class Female extends Human{
+    public void walk(){
+        System.out.println("female 걷기");
+    }
+}
+
+class Male extends Human{
+    public void walk(){
+        System.out.println("male 걷기");
+    }
+}
+
+class Person extends Female, Male{
+    public void walk(){
+        super.walk();
+    }
+}
+```
+
+
+
+
+
 # 예제
 
 ![img1](../images/2022-01-31-interface/img1.png)
