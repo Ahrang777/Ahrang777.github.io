@@ -63,7 +63,7 @@ sidebar:
 
 [Java가 다중 상속을 지원하지 않는 이유]
 
-![img2](../images/2022-01-31-interface/img2.png)
+![img2](https://user-images.githubusercontent.com/59478159/151828859-29fea9f2-4a44-41ef-baad-acd53a6e035f.png)
 
 
 
@@ -101,7 +101,7 @@ class Person extends Female, Male{
 
 # 예제
 
-![img1](../images/2022-01-31-interface/img1.png)
+![img1](https://user-images.githubusercontent.com/59478159/151828849-392834a7-4fcb-427a-a332-df55ee5e236e.png)
 
 
 
