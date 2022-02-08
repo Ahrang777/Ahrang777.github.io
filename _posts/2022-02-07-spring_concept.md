@@ -51,7 +51,7 @@ https://ahrang777.github.io/etc/solid/
 
 
 
-![spring1](../images/2022-02-07-spring_concept/spring1.png)
+![spring1](https://user-images.githubusercontent.com/59478159/152772149-fc5c4790-7216-4d71-a03b-4e233b7d3b61.png)
 
 다음 사진을 보면 운전자는 자동차라는 역할만 알면 되고 K3, 아반떼, 테슬라 모델3 에 대해서는 잘 몰라도 운전이 가능하다. 때문에 K3 에서 아반떼로 차를 바꾸어도 아무 문제없이 운전할 수 있다. 
 
