@@ -29,7 +29,7 @@ ApplicationContext ac = new AnnotationConfigApplicationContext(AppConfig.class);
 
 
 
-![springbean1](../images/2022-02-08-spring_bean/springbean1.png)
+![springbean1](https://user-images.githubusercontent.com/59478159/153131470-76216646-10df-4c36-890b-541a32c9ce64.png)
 
 BeanFactory 인터페이스는 스프링 컨테이너의 최상위 인터페이스로 스프링 빈을 관리하고 조회하는 역할을 담당한다. 
 
@@ -45,7 +45,7 @@ AnnotationConfigApplicatoinContext 는 ApplicationContext 인터페이스의 구
 
 앞서 말했듯 스프링 컨테이너 생성시 설정 정보가 필요한데 스프링 컨테이너는 다양한 형식의 설정 정보를 받아들일 수 있게 유연하게 설계되어 있다. 
 
-![springbean2](../images/2022-02-08-spring_bean/springbean2.png)
+![springbean2](https://user-images.githubusercontent.com/59478159/153131474-7783224d-4a23-4344-8a2e-bcde8dfec103.png)
 
 
 
@@ -121,11 +121,11 @@ BeanDefinition 덕분에 가능한 일이다. XML 형식이든 어노테이션 �
 
 
 
-![springbean3](../images/2022-02-08-spring_bean/springbean3-16443109091741.png)
+![springbean3](https://user-images.githubusercontent.com/59478159/153131484-82123b8b-02dd-4edc-892c-1233202453c5.png)
 
 
 
-![springbean4](../images/2022-02-08-spring_bean/springbean4.png)
+![springbean4](https://user-images.githubusercontent.com/59478159/153131492-a1e5ea9c-af61-4151-8430-7ca7f628c181.png)
 
 
 
