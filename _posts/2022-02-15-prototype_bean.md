@@ -58,7 +58,7 @@ sidebar:
 
 
 
-![prototype1](../images/2022-02-15-prototype_bean/prototype1.png)
+![prototype1](https://user-images.githubusercontent.com/59478159/154043315-42f52d6c-f4e2-48db-a431-5b959f8a520a.png)
 
 1. 클라이언트 A 는 clientBean을 스프링 컨테이너에 요청해서 받고 이 clientBean은 싱글톤이라서 항상 같은 clientBean이 반환된다. 
 
@@ -68,7 +68,7 @@ sidebar:
 
 
 
-![prototype2](../images/2022-02-15-prototype_bean/prototype2.png)
+![prototype2](https://user-images.githubusercontent.com/59478159/154043348-c86c3982-f905-4bae-9cb8-27f3cd1b02c3.png)
 
 4. 클라이언트 B는 clientBean을 스프링 컨테이너에 요청해서 받고 이 clientBean은 싱글톤이라서 항상 같은 clientBean이 반환된다. 
 
