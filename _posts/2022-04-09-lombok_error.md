@@ -17,7 +17,7 @@ sidebar:
 
 
 
-![lombok 해결전 에러](../images/2022-04-09-lombok_error/lombok 해결전 에러.png)
+![lombok 해결전 에러](https://user-images.githubusercontent.com/59478159/162566136-3400edc3-0bad-44a0-a4c6-cd94a745a0cf.png)
 
 
 
@@ -27,7 +27,7 @@ Dependencies의 Classpath 를 확인해 본 결과 compileClasspath 에만 lombo
 
 
 
-![lombok 해결전 path](../images/2022-04-09-lombok_error/lombok 해결전 path.png)
+![lombok 해결전 path](https://user-images.githubusercontent.com/59478159/162566151-eb105782-5c4b-458e-86a3-609204d97e96.png)
 
 
 
@@ -38,7 +38,7 @@ gradle의 dependencies를 보면 lombok이 testCompilepath 에 포함되지 않�
 
 
 
-![lombok 해결전](../images/2022-04-09-lombok_error/lombok 해결전.png)
+![lombok 해결전](https://user-images.githubusercontent.com/59478159/162566113-c695ca8a-0a2c-44b5-849f-fdfd85da4a48.png)
 
 
 
@@ -53,9 +53,8 @@ gradle의 dependencies를 보면 lombok이 testCompilepath 에 포함되지 않�
 **testCompileOnly 'org.projectlombok:lombok'** 
 **testAnnotationProcessor 'org.projectlombok:lombok'**
 
-![lombok 해결후](../images/2022-04-09-lombok_error/lombok 해결후.png)
+![lombok 해결후](https://user-images.githubusercontent.com/59478159/162566170-ddadd688-e7cb-4109-865d-110ea29ff8c0.png)
 
 
-
-![lombok 해결후 path](../images/2022-04-09-lombok_error/lombok 해결후 path.png)
+![lombok 해결후 path](https://user-images.githubusercontent.com/59478159/162566176-acb7a532-2b43-4d3b-ba37-3f6eef1f454a.png)
 
