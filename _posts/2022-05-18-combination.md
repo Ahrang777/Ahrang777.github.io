@@ -150,7 +150,7 @@ depth == n 인 경우는 r개 만큼 다 뽑지 못했지만 모든 인덱스를
 
 
 
-![comb1](../images/2022-05-18-combination/comb1.png)
+![comb1](https://user-images.githubusercontent.com/59478159/168999293-cdb00ac8-d7c8-482d-bb02-737949b142dd.png)
 
 
 
@@ -302,7 +302,7 @@ public class Combination {
 
 
 
- ![comb2](../images/2022-05-18-combination/comb2.png)
+ ![comb2](https://user-images.githubusercontent.com/59478159/168999325-b7782557-0ebe-431d-af60-259ac0a4fe7e.png)
 
 
 
