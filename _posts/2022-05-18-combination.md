@@ -128,6 +128,16 @@ arr[index] 원소를 선택할 경우는 index = start일때 다 찾아지고
             }
         }
     }
+    
+    //조합 쌍 출력
+    public static void print(int[] arr, boolean[] visited, int n) {
+        for (int i = 0; i < n; i++) {
+            if (visited[i] == true) {
+                System.out.print(arr[i] + " ");
+            }
+        }
+        System.out.println();
+    }
 ```
 
 
@@ -178,6 +188,16 @@ depth == n 인 경우는 r개 만큼 다 뽑지 못했지만 모든 인덱스를
             visited[depth] = false;
             comb2(arr, visited, depth + 1, n, r);
         }
+    }
+    
+    //조합 쌍 출력
+    public static void print(int[] arr, boolean[] visited, int n) {
+        for (int i = 0; i < n; i++) {
+            if (visited[i] == true) {
+                System.out.print(arr[i] + " ");
+            }
+        }
+        System.out.println();
     }
 ```
 
