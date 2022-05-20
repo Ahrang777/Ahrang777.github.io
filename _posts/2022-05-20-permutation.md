@@ -43,7 +43,7 @@ depth: 1 <-> index: 1(자기 자신이라 교환해도 그대로), index: 2
 
 
 
-![permutation1](../images/2022-05-20-permutation/permutation1.png)
+![permutation1](https://user-images.githubusercontent.com/59478159/169519731-b8d35898-150a-472c-9955-18e5871e6c12.png)
 
 
 
@@ -140,7 +140,7 @@ depth == r 인 경우가 다 뽑은 것으로 종료
 
 
 
-![permutation2](../images/2022-05-20-permutation/permutation2.png)
+![permutation2](https://user-images.githubusercontent.com/59478159/169519735-7a176d89-0826-4296-976b-98557f5cfd3e.png)
 
 
 
