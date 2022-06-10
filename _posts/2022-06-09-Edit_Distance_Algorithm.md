@@ -96,7 +96,7 @@ sidebar:
 
 
 
-![Edit Distance](../images/2022-06-09-Edit_Distance_Algorithm/Edit Distance.png)
+![Edit Distance](https://user-images.githubusercontent.com/59478159/172994990-12135221-e65a-4f60-b563-6cc16cdf7f43.png)
 
 
 
