@@ -21,6 +21,6 @@ sidebar:
 
 [Settings] - [File Encodings] - Default encoding for properties files : UTF-8
 
-![error_message_problem](../images/2022-09-12-error_message_problem/error_message_problem.png)
+![error_message_problem](https://user-images.githubusercontent.com/59478159/191713361-6304db8a-83a0-4093-98c6-462d8c182a30.png)
 
 이후 exception.properties 파일을 확인해서 ??? 로 변경되었던 내용을 다시 한글로 변경하고 실행시켜 보면 정상적으로 한글로 나오게 됩니다. 
