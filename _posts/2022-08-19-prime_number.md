@@ -38,7 +38,7 @@ n은 2이상 1000000이하의 자연수입니다.
 
 
 
-![prime](../images/2022-08-19-prime_number/prime.gif)
+![prime](https://user-images.githubusercontent.com/59478159/191713541-08fa04a3-e24a-4680-ab0a-60e308dd4a4e.gif)
 
 
 
