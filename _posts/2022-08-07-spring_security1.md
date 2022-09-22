@@ -33,7 +33,7 @@ Spring Security는 인증 절차를 거친 후 인가 절차를 진행하며 인
 
 
 
-![security2](../images/2022-08-07-spring_security1/security2.png)
+![security2](https://user-images.githubusercontent.com/59478159/191713730-d44d0769-f78a-4df0-aae7-5b4af8a9bcdf.png)
 
 
 
@@ -302,7 +302,7 @@ public PasswordEncoder passwordEncoder() {
 
 
 
-![security1](../images/2022-08-07-spring_security1/security1-16634472181771.png)
+![security1](https://user-images.githubusercontent.com/59478159/191713699-95da6ac1-d018-440c-a908-1039152f0061.png)
 
 1. 사용자가 아이디, 비밀번호로 로그인을 요청함
 2. AuthenticationFilter로 요청이 들어오게 되고, 아이디와 비밀번호를 기반으로 아직 인증되지 않은 UsernamePasswordAuthenticationToken 을 생성한다.
