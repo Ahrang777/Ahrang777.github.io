@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "[Spring][AWS EC2] nohup를 이용하여 무중단 서비스 만들기
+title:  "[Spring][AWS EC2] nohup를 이용하여 무중단 서비스 만들기"
 categories: Spring
 tag: [Spring, ec2]
 toc: true

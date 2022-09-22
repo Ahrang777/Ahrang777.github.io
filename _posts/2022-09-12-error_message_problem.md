@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "[Spring][error] 메시지 국제화 한글깨짐 현상
+title:  "[Spring][error] 메시지 국제화 한글깨짐 현상"
 categories: Spring
 tag: [Spring, message, error]
 toc: true
