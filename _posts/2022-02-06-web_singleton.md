@@ -122,14 +122,8 @@ public class AppConfig{
 
 
 
+reference
 
+[참고1](https://mangkyu.tistory.com/153)
 
-
-
-
-
-참고 
-
-https://mangkyu.tistory.com/153 
-
-[스프링 핵심 원리 - 기본편 - 인프런 | 강의 (inflearn.com)](https://www.inflearn.com/course/스프링-핵심-원리-기본편)
+[참고2](https://www.inflearn.com/course/스프링-핵심-원리-기본편)
