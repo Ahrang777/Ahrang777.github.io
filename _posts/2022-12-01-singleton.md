@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "싱글톤 패턴(Singleton pattern)"
+title:  "싱글톤 패턴(Singleton Pattern)"
 categories: sw
 tag: [sw, design pattern]
 toc: true
@@ -169,6 +169,12 @@ public class Singleton {
 
 
 
+참고
+
+synchronized 키워드를 사용할 경우 자바 내부적으로 해당 영역이나 메서드를 lock, unlock 처리하기 때문에 내부적으로 많은 cost가 발생합니다. 따라서 많은 thread 들이 getInstance()를 호출하게 되면 프로그램 전반적인 성능저하가 발생합니다.
+
+
+
 ### DCL(Double Checked Locking)
 
 이 방법을 통해 if문을 통과한 처음 인스턴스를 생성하는 경우 1 번만 synchronized 를 적용시킵니다.
@@ -255,7 +261,7 @@ public class Singleton {
 
 ### Initialization on demand holder idiom
 
-Demand(또는 Lazy) Holder 방식은 가장 많이 사용되는 싱글톤 구현 방식입니다. 
+**Demand(또는 Lazy) Holder 방식은 가장 많이 사용되는 싱글톤 구현 방식입니다.** 
 
 volatile이나 synchronized 키워드 없이도 동시성 문제를 해결할 수 있습니다. 
 
@@ -269,8 +275,8 @@ public class Singleton {
         // 생성자는 외부에서 호출못하게 private 으로 지정해야 한다.
     }
     
-    public static class LazyHolder {
-        public static final Singleton INSTANCE = new Singleton();
+    private static class LazyHolder {
+        private static final Singleton INSTANCE = new Singleton();
     }
 
     public static Singleton getInstance() {
@@ -306,3 +312,4 @@ reference
 
 [참고1](https://tecoble.techcourse.co.kr/post/2020-11-07-singleton/)
 
+[참고2](https://limkydev.tistory.com/67)
