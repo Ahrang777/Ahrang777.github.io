@@ -105,7 +105,7 @@ public class AppConfig{
     
     @Bean
     public MemberRepository memberRepository(){
-        System.out.println("memberRepository()")
+        System.out.println("memberRepository()");
         return new MemoryMemberRepository();
     }
 }
