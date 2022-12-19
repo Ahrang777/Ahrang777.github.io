@@ -28,7 +28,7 @@ sidebar:
 
 GoF 디자인 패턴 중 생성 패턴(Creational Pattern) 중 하나입니다. 다양한 구현체(Product)가 있고, 그 중에서 특정한 구현체를 만들 수 있는 다양한 팩토리(Creator)를 제공할 수 있습니다. 상속을 통해 서브 클래스에서 팩토리 메서드를 오버라이딩하여 객체의 생성부를 구현합니다.
 
-![factory](../images/2022-12-10-factory_method/factory.png)
+![factory](https://user-images.githubusercontent.com/59478159/208369858-5b9d276e-912c-47f0-b4cb-578c35a4ef10.png)
 
 
 
@@ -64,7 +64,7 @@ GoF 디자인 패턴 중 생성 패턴(Creational Pattern) 중 하나입니다. 
 
 
 
-![factory2](../images/2022-12-10-factory_method/factory2.png)
+![factory2](https://user-images.githubusercontent.com/59478159/208369871-9aa5c02a-4aaf-42df-875c-d3db9a2dcc63.png)
 
 
 
