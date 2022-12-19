@@ -15,7 +15,7 @@ sidebar:
 
 GoF 디자인 패턴 중 생성 패턴(Creational Pattern) 중 하나입니다. 관련성 있는 여러 종류의 객체들을 일관된 방식으로 생성할 때 유용합니다. 구체적으로 어떤 클래스의 인스턴스(concrete product)를 사용하는지 감출 수 있습니다. 
 
-![abstract](../images/2022-12-19-abstract_factory/abstract.png)
+![abstract](https://user-images.githubusercontent.com/59478159/208392065-e7f6615e-270e-47f0-8db8-cb4140c4f005.png)
 
 
 
@@ -68,7 +68,7 @@ GoF 디자인 패턴 중 생성 패턴(Creational Pattern) 중 하나입니다. 
 
 템플릿 메서드 패턴을 적용하여 코드의 중복을 줄입니다.
 
-![abstract1](../images/2022-12-19-abstract_factory/abstract1.png)
+![abstract1](https://user-images.githubusercontent.com/59478159/208392091-3e183bb2-07d9-4a00-8715-fcdba34ced70.png)
 
 ```java
 // 메일 템플릿 생성 추상 클래스
@@ -137,7 +137,7 @@ public class AvatarMailTemplate extends MailTemplate {
 
 ## 확장성 있는 코드로 변경: 팩토리 메서드 패턴 적용
 
-![abstract2](../images/2022-12-19-abstract_factory/abstract2.png)
+![abstract2](https://user-images.githubusercontent.com/59478159/208392101-3af1713c-e269-4940-909f-e64a4dc7fb04.png)
 
 
 
@@ -228,7 +228,7 @@ public class Client {
 
 결국 검색 추천 메일을 생성할 때는 SearchMailTemplate, SearchMailValidUser 객체가 필요하고 개인 맞춤 메일을 생성할 때는 AvatarMailTemplate, AvatarMailValidUser 객체가 필요합니다. 때문에 ValidUserFactory, MailTemplateFactory 처럼 팩토리 클래스를 생성하는 것이 아니라 검색 추천 메일 관련 팩토리 클래스, 맞춤 메일 관련 팩토리 클래스를 구현하여 해당 클래스에서 필요한 객체들을 생성하도록 합니다. 
 
-![abstract3](../images/2022-12-19-abstract_factory/abstract3.png)
+![abstract3](https://user-images.githubusercontent.com/59478159/208392311-8641e8b5-e97a-4335-b6dd-d1bf9ab1f7d0.png)
 
 
 
@@ -297,7 +297,7 @@ public class Client {
 
 메일 타입 별 팩토리 클래스를 정의하기에 새로운 타입이 추가되면 팩토리 클래스만 봤을때는 해당 타입의 팩토리 클래스만 추가하면 됩니다. (세 번째 문제 해결)
 
-![abstract4](../images/2022-12-19-abstract_factory/abstract4.png)
+![abstract4](https://user-images.githubusercontent.com/59478159/208392331-28fc8e83-0ed7-4381-9f92-38d10e4879d6.png)
 
 
 
