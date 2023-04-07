@@ -21,7 +21,7 @@ sidebar:
 
 # 구조
 
-![template_method1](../images/2023-04-07-template_method/template_method1.png)
+![template_method1](https://user-images.githubusercontent.com/59478159/230580635-0b78da5f-fdd3-4fd4-b512-c6e91eb7d46f.png)
 
 - AbstractClass(추상 클래스) : 템플릿 메소드를 구현하고, 템플릿 메소드에서 사용되는 세부 메소드를 추상 메소드로 선언합니다. 
 - ConcreteClass(구현 클래스) : AbstractClass를 상속하고 추상 메소드인 세부 메소드를 구현합니다. 
